@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using V1._0._1;
+using System.IO;
 
 
 internal class Program
@@ -19,26 +21,18 @@ internal class Program
 
         while (vrai)
         {
+            /// We prompt the user for a string
             MenuChoice = Console.ReadLine();
             MenuChoiceLower = MenuChoice.ToLower();
 
-            /// We prompt the user for a string
             switch (MenuChoiceLower)
             {
                 // Choice 1 : create a new save
                 case "createnewsave":
-
-                    // Sub choice 1 : choose folder to copy
-
-                    // Sub choice 2 : choose the number of save
-
-                    // Sub choice 3 : choose where to save
-
-                    // Sub choice 4 : choose where to save
-
-                    // Sub choice 5 : choose a name
-
-                    // Sub choice 6 : choose a type
+                    CreateNewSave a = new CreateNewSave();
+                    Console.WriteLine("EasySave 1.0.1\n");
+                    Console.WriteLine("\r\n _____                  _____                 \r\n|  ___|                /  ___|                \r\n| |__  __ _ ___ _   _  \\ `--.  __ ___   _____ \r\n|  __|/ _` / __| | | |  `--. \\/ _` \\ \\ / / _ \\\r\n| |__| (_| \\__ \\ |_| | /\\__/ / (_| |\\ V /  __/\r\n\\____/\\__,_|___/\\__, | \\____/ \\__,_| \\_/ \\___|\r\n                 __/ |                        \r\n                |___/                         \r\n");
+                    Console.WriteLine("Make a choice :\n\nCreateNewSave : To create a new save\nSave : To list existing save\nShowDailyLog : To Show daily log\nShowStateLog : To show state log\nExit : To exit\n");
                     break;
 
                 // Choice 2 : save
