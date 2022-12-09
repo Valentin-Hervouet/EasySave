@@ -37,6 +37,8 @@ internal class Program
                     MenuChoiceCreateNewSave.ClearEverything();
 
                     DisplayMenuPrintMenu.DisplayMenu();
+
+
                     break;
                             
                 // Choice 2 : save

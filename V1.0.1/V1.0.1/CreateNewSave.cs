@@ -16,20 +16,11 @@ namespace V1._0._1
         protected string SaveType;
         protected string SaveTypeLower;
 
-        public void CreateNewSave()
+        /*
+        public CreateNewSave()
         {
-            //this.OriginFolderPath = OriginFolderPath;
-            //this.DestinationFolderPath = DestinationFolderPath;
-            //this.SaveName = SaveName;
-            //this.SaveType = SaveType;
-            //this.SaveTypeLower = SaveTypeLower;
-
-            SubChoice1();
-            SubChoice2();
-            SubChoice3();
-            SubChoice4();
-            EndLoading();
         }
+        */
 
         /// Clear everything before starting
         public void ClearEverything()
@@ -38,7 +29,7 @@ namespace V1._0._1
         }
 
         /// Sub choice 1 : choose folder to copy
-        public void SubChoice1()
+        public string SubChoice1()
         {
             Console.WriteLine("Give the path of the folder you want to copy");
             OriginFolderPath = Console.ReadLine();
@@ -49,10 +40,11 @@ namespace V1._0._1
                 OriginFolderPath = Console.ReadLine();
                 Console.WriteLine("\n");
             }
+            return OriginFolderPath;
         }
 
         /// Sub choice 2 : choose where to save
-        public void SubChoice2()
+        public string SubChoice2()
         {
             Console.WriteLine("Give the path of the destination");
             DestinationFolderPath = Console.ReadLine();
@@ -63,10 +55,11 @@ namespace V1._0._1
                 DestinationFolderPath = Console.ReadLine();
                 Console.WriteLine("\n");
             }
+            return DestinationFolderPath;
         }
 
         /// Sub choice 3 : choose a name
-        public void SubChoice3()
+        public string SubChoice3()
         {
             Console.WriteLine("Give your save a name");
             SaveName = Console.ReadLine();
@@ -77,10 +70,11 @@ namespace V1._0._1
                 SaveName = Console.ReadLine();
                 Console.WriteLine("\n");
             }
+            return SaveName;
         }
 
         /// Sub choice 4 : choose a type
-        public void SubChoice4()
+        public string SubChoice4()
         {
             Console.WriteLine("What type of save do you want : Complete or Differential");
             SaveType = Console.ReadLine();
@@ -93,6 +87,7 @@ namespace V1._0._1
                 SaveTypeLower = SaveType.ToLower();
                 Console.WriteLine("\n");
             }
+            return SaveType;
         }
 
         // End of CreateNewSave
