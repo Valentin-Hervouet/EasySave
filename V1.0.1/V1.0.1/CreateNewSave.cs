@@ -16,11 +16,10 @@ namespace V1._0._1
         protected string SaveType;
         protected string SaveTypeLower;
 
-        /*
-        public CreateNewSave()
+        // Constructor
+        public ClassCreateNewSave()
         {
         }
-        */
 
         /// Clear everything before starting
         public void ClearEverything()
