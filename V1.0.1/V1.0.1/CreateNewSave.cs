@@ -2,23 +2,44 @@
 using System.Security.Cryptography.X509Certificates;
 using V1._0._1;
 using System.IO;
+using System.Threading;
+using System.Runtime.CompilerServices;
 
 namespace V1._0._1
 {
-    public class CreateNewSave
+    class ClassCreateNewSave
     {
-        public CreateNewSave()
+        // Variables used
+        protected string OriginFolderPath;
+        protected string DestinationFolderPath;
+        protected string SaveName;
+        protected string SaveType;
+        protected string SaveTypeLower;
+
+        public void CreateNewSave()
         {
-            // Variables used
-            string OriginFolderPath;
-            string DestinationFolderPath;
-            string SaveName;
-            string SaveType;
-            string SaveTypeLower;
+            this.OriginFolderPath = OriginFolderPath;
+            this.DestinationFolderPath = DestinationFolderPath;
+            this.SaveName = SaveName;
+            this.SaveType = SaveType;
+            this.SaveTypeLower = SaveTypeLower;
 
+            SubChoice1();
+            SubChoice2();
+            SubChoice3();
+            SubChoice4();
+            EndLoading();
+        }
+
+        /// Clear everything before starting
+        public void ClearEverything()
+        {
             Console.Clear();
+        }
 
-            /// Sub choice 1 : choose folder to copy
+        /// Sub choice 1 : choose folder to copy
+        public void SubChoice1()
+        {
             Console.WriteLine("Give the path of the folder you want to copy");
             OriginFolderPath = Console.ReadLine();
             Console.WriteLine("\n");
@@ -28,8 +49,11 @@ namespace V1._0._1
                 OriginFolderPath = Console.ReadLine();
                 Console.WriteLine("\n");
             }
+        }
 
-            /// Sub choice 2 : choose where to save
+        /// Sub choice 2 : choose where to save
+        public void SubChoice2()
+        {
             Console.WriteLine("Give the path of the destination");
             DestinationFolderPath = Console.ReadLine();
             Console.WriteLine("\n");
@@ -39,8 +63,11 @@ namespace V1._0._1
                 DestinationFolderPath = Console.ReadLine();
                 Console.WriteLine("\n");
             }
+        }
 
-            /// Sub choice 3 : choose a name
+        /// Sub choice 3 : choose a name
+        public void SubChoice3()
+        {
             Console.WriteLine("Give your save a name");
             SaveName = Console.ReadLine();
             Console.WriteLine("\n");
@@ -50,8 +77,11 @@ namespace V1._0._1
                 SaveName = Console.ReadLine();
                 Console.WriteLine("\n");
             }
+        }
 
-            /// Sub choice 4 : choose a type
+        /// Sub choice 4 : choose a type
+        public void SubChoice4()
+        {
             Console.WriteLine("What type of save do you want : Complete or Differential");
             SaveType = Console.ReadLine();
             SaveTypeLower = SaveType.ToLower();
@@ -63,8 +93,25 @@ namespace V1._0._1
                 SaveTypeLower = SaveType.ToLower();
                 Console.WriteLine("\n");
             }
+        }
 
-            // End of this
+        // End of CreateNewSave
+        public void EndLoading()
+        {
+            Console.Clear();
+            string text = ".";
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(text);
+                Thread.Sleep(500);
+                Console.Clear();
+                text += ".";
+            }
+
+            Console.Clear();
+            Console.WriteLine("Task was sucessfuly done");
+            Thread.Sleep(2000);
             Console.Clear();
         }
     }
