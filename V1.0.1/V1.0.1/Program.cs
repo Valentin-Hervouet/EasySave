@@ -9,10 +9,8 @@ internal class Program
     private static void Main(string[] args)
     {
         // We open the app menu
-        Console.WriteLine("EasySave 1.0.1\n");
-        Console.WriteLine("\r\n _____                  _____                 \r\n|  ___|                /  ___|                \r\n| |__  __ _ ___ _   _  \\ `--.  __ ___   _____ \r\n|  __|/ _` / __| | | |  `--. \\/ _` \\ \\ / / _ \\\r\n| |__| (_| \\__ \\ |_| | /\\__/ / (_| |\\ V /  __/\r\n\\____/\\__,_|___/\\__, | \\____/ \\__,_| \\_/ \\___|\r\n                 __/ |                        \r\n                |___/                         \r\n");
-        Console.WriteLine("Make a choice :\n\nCreateNewSave : To create a new save\nSave : To list existing save\nShowDailyLog : To Show daily log\nShowStateLog : To show state log\nExit : To exit\n");
-        Console.Title = "EasySave 1.0.1";
+        ClassPrintMenu DisplayMenuPrintMenu = new ClassPrintMenu();
+        DisplayMenuPrintMenu.DisplayMenu();
 
         // We let the user make a choice
         string MenuChoice;
@@ -36,18 +34,16 @@ internal class Program
                     MenuChoiceCreateNewSave.SubChoice3();
                     MenuChoiceCreateNewSave.SubChoice4();
                     MenuChoiceCreateNewSave.EndLoading();
+                    MenuChoiceCreateNewSave.ClearEverything();
 
-
-                    Console.WriteLine("EasySave 1.0.1\n");
-                    Console.WriteLine("\r\n _____                  _____                 \r\n|  ___|                /  ___|                \r\n| |__  __ _ ___ _   _  \\ `--.  __ ___   _____ \r\n|  __|/ _` / __| | | |  `--. \\/ _` \\ \\ / / _ \\\r\n| |__| (_| \\__ \\ |_| | /\\__/ / (_| |\\ V /  __/\r\n\\____/\\__,_|___/\\__, | \\____/ \\__,_| \\_/ \\___|\r\n                 __/ |                        \r\n                |___/                         \r\n");
-                    Console.WriteLine("Make a choice :\n\nCreateNewSave : To create a new save\nSave : To list existing save\nShowDailyLog : To Show daily log\nShowStateLog : To show state log\nExit : To exit\n");
+                    DisplayMenuPrintMenu.DisplayMenu();
                     break;
-
+                            
                 // Choice 2 : save
                 case "save":
 
                     // Sub choice 1 : save 1 save
-
+                    
                     // Sub choice 2 : save all save
                     break;
 

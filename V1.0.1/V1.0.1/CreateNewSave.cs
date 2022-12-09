@@ -18,11 +18,11 @@ namespace V1._0._1
 
         public void CreateNewSave()
         {
-            this.OriginFolderPath = OriginFolderPath;
-            this.DestinationFolderPath = DestinationFolderPath;
-            this.SaveName = SaveName;
-            this.SaveType = SaveType;
-            this.SaveTypeLower = SaveTypeLower;
+            //this.OriginFolderPath = OriginFolderPath;
+            //this.DestinationFolderPath = DestinationFolderPath;
+            //this.SaveName = SaveName;
+            //this.SaveType = SaveType;
+            //this.SaveTypeLower = SaveTypeLower;
 
             SubChoice1();
             SubChoice2();
@@ -112,7 +112,6 @@ namespace V1._0._1
             Console.Clear();
             Console.WriteLine("Task was sucessfuly done");
             Thread.Sleep(2000);
-            Console.Clear();
         }
     }
 }
