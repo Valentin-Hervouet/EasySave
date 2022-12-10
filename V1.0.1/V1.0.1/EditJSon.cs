@@ -45,8 +45,14 @@ namespace V1._0._1
             /// Concatenate all the information
             string CreateSaveData = SaveName + "," + OriginFolderPath + "," + DestinationFolderPath + "," + DestPath + "," + FileSize.ToString() + "," + FileTransferTime + "," + Time.ToString();
 
-            /// Convert the tring into a list
-            List<string> ListCreateSaveData = CreateSaveData.Split(',').ToList();
+            /// Read JSon and put all the info into a List
+            string CurentLogJSonData = File.ReadAllText(this.dailypath);
+
+            /// Concateneat the two string
+            string CreateSaveDataAndCurentLogJSonData = CreateSaveData+ CurentLogJSonData;
+
+            /// Convert the string into a list
+            List<string> ListCreateSaveData = CreateSaveDataAndCurentLogJSonData.Split(',').ToList();
 
             /// Write into JSon
             string updatedJson = JsonConvert.SerializeObject(ListCreateSaveData, Newtonsoft.Json.Formatting.Indented);
