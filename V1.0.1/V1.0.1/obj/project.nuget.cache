@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sqqMflar4KGaz8W5K4O9vjBJamQTYBHPmAX919j9YyHKOVKxXrXKLgAFrpa3Vj6d1kCQdEIVUd1c3fT/xbzZbg==",
+  "dgSpecHash": "xRFv+2u0CliGk8NX/z7QBnmpshScfJywAuSkTBWbe/fDaFT2qrMhxH46DyEEN1NEUdxbvx5PDu4AJIIk2Zneqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Valentin\\Desktop\\Programation Systeme\\V1.0.1\\V1.0.1\\V1.0.1\\V1.0.1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Valentin\\Desktop\\ProgramationSysteme\\V1.0.1\\V1.0.1\\V1.0.1\\V1.0.1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Valentin\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

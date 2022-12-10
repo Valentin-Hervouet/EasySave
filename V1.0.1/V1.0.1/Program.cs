@@ -29,16 +29,19 @@ internal class Program
                 case "createnewsave":
                     ClassCreateNewSave MenuChoiceCreateNewSave = new ClassCreateNewSave();
                     MenuChoiceCreateNewSave.ClearEverything();
-                    MenuChoiceCreateNewSave.SubChoice1();
-                    MenuChoiceCreateNewSave.SubChoice2();
-                    MenuChoiceCreateNewSave.SubChoice3();
-                    MenuChoiceCreateNewSave.SubChoice4();
+                    string OriginFolderPath = MenuChoiceCreateNewSave.SubChoice1();
+                    string DestinationFolderPath = MenuChoiceCreateNewSave.SubChoice2();
+                    string SaveName = MenuChoiceCreateNewSave.SubChoice3();
+                    string SaveType = MenuChoiceCreateNewSave.SubChoice4();
                     MenuChoiceCreateNewSave.EndLoading();
                     MenuChoiceCreateNewSave.ClearEverything();
 
+                    /// Write inputs on the log file Json
+                    ClassEditJSon MenuChoiceEditJSon = new ClassEditJSon();
+                    MenuChoiceEditJSon.SaveIntoLogPath(OriginFolderPath, DestinationFolderPath, SaveName, SaveType);
+
+                    /// Go back on the menu
                     DisplayMenuPrintMenu.DisplayMenu();
-
-
                     break;
                             
                 // Choice 2 : save
@@ -51,6 +54,7 @@ internal class Program
 
                 // Choice 3 : show daily log
                 case "showdailylog":
+
                     break;
 
                 // Choice 4 : show state log
