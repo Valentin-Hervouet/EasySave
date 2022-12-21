@@ -9,7 +9,11 @@ internal class Program
     private static void Main(string[] args)
     {
         // We open the app menu
+        /// We initiate all that will be used later on
         ClassPrintMenu DisplayMenuPrintMenu = new ClassPrintMenu();
+        ClassCreateNewSave MenuChoiceCreateNewSave = new ClassCreateNewSave();
+
+        /// We print the menu
         DisplayMenuPrintMenu.DisplayMenu();
 
         // We let the user make a choice
@@ -27,14 +31,13 @@ internal class Program
             {
                 // Choice 1 : create a new save
                 case "createnewsave":
-                    ClassCreateNewSave MenuChoiceCreateNewSave = new ClassCreateNewSave();
-                    MenuChoiceCreateNewSave.ClearEverything();
+                    DisplayMenuPrintMenu.ClearEverything();
                     string OriginFolderPath = MenuChoiceCreateNewSave.SubChoice1();
                     string DestinationFolderPath = MenuChoiceCreateNewSave.SubChoice2();
                     string SaveName = MenuChoiceCreateNewSave.SubChoice3();
                     string SaveType = MenuChoiceCreateNewSave.SubChoice4();
                     MenuChoiceCreateNewSave.EndLoading();
-                    MenuChoiceCreateNewSave.ClearEverything();
+                    DisplayMenuPrintMenu.ClearEverything();
 
                     /// Write inputs on the log file Json
                     ClassEditJSon MenuChoiceEditJSon = new ClassEditJSon();
@@ -62,8 +65,14 @@ internal class Program
                     break;
 
                 // Choice 5 : exit
-                case "exit" :
+                case "exit":
                     vrai = false;
+                    break;
+
+                // Choice 6 : clear
+                case "clear":
+                    DisplayMenuPrintMenu.ClearEverything();
+                    DisplayMenuPrintMenu.DisplayMenu();
                     break;
 
                 // In case the user type something else

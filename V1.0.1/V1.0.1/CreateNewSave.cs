@@ -21,12 +21,6 @@ namespace V1._0._1
         {
         }
 
-        /// Clear everything before starting
-        public void ClearEverything()
-        {
-            Console.Clear();
-        }
-
         /// Sub choice 1 : choose folder to copy
         public string SubChoice1()
         {
